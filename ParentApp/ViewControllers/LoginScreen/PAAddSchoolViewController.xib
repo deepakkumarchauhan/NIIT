@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PAAddSchoolViewController">
+            <connections>
+                <outlet property="addButtonHieghtConstraint" destination="Edf-s6-Gdd" id="qQx-Im-imB"/>
+                <outlet property="addSchoolCollectionView" destination="KkE-8j-iyb" id="9Sk-KS-Jr7"/>
+                <outlet property="addSchoolHeaderView" destination="ujE-ok-dGP" id="6FJ-Bq-i7R"/>
+                <outlet property="addSchoolTableView" destination="b00-K8-vWs" id="cXw-sv-BN0"/>
+                <outlet property="schoolURL" destination="ETL-uJ-2kN" id="eOy-z3-Vfe"/>
+                <outlet property="submitButton" destination="ETt-e6-1zo" id="YfM-c2-rCQ"/>
+                <outlet property="view" destination="NKZ-aZ-G5Z" id="F3h-9P-S7x"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NKZ-aZ-G5Z">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WNd-rr-cQd">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b00-K8-vWs" customClass="TPKeyboardAvoidingTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="7V2-I4-ZCR">
+                        <rect key="frame" x="0.0" y="449" width="600" height="151"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETt-e6-1zo">
+                                <rect key="frame" x="25" y="8" width="550" height="40"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.70196078429999997" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GXJ-XX-JsN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="15"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352939999995" green="0.86274509799999999" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButtonAction:" destination="-1" eventType="touchUpInside" id="4OL-nZ-jUV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKm-SN-mUV">
+                                <rect key="frame" x="25" y="62" width="550" height="40"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.41960784313725491" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ylg-h2-rlQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="15"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352939999995" green="0.86274509799999999" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="-1" eventType="touchUpInside" id="lqs-3L-Wau"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ETt-e6-1zo" firstAttribute="leading" secondItem="7V2-I4-ZCR" secondAttribute="leading" constant="25" id="1b4-JX-LnG"/>
+                            <constraint firstAttribute="trailing" secondItem="ETt-e6-1zo" secondAttribute="trailing" constant="25" id="7dN-qH-Lik"/>
+                            <constraint firstItem="FKm-SN-mUV" firstAttribute="top" secondItem="7V2-I4-ZCR" secondAttribute="top" constant="62" id="Edf-s6-Gdd"/>
+                            <constraint firstItem="FKm-SN-mUV" firstAttribute="leading" secondItem="7V2-I4-ZCR" secondAttribute="leading" constant="25" id="JYP-32-k3Y"/>
+                            <constraint firstAttribute="trailing" secondItem="FKm-SN-mUV" secondAttribute="trailing" constant="25" id="KtB-Im-jeV"/>
+                            <constraint firstItem="ETt-e6-1zo" firstAttribute="top" secondItem="7V2-I4-ZCR" secondAttribute="top" constant="8" id="Y7s-6W-8aU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="aFS-0u-8sB"/>
+                        <outlet property="delegate" destination="-1" id="OjZ-yc-gqq"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="b00-K8-vWs" firstAttribute="leading" secondItem="NKZ-aZ-G5Z" secondAttribute="leading" id="2Ag-Ke-ECO"/>
+                <constraint firstItem="WNd-rr-cQd" firstAttribute="top" secondItem="NKZ-aZ-G5Z" secondAttribute="top" id="DpC-qX-Inr"/>
+                <constraint firstItem="b00-K8-vWs" firstAttribute="top" secondItem="NKZ-aZ-G5Z" secondAttribute="top" id="FM6-de-nPF"/>
+                <constraint firstAttribute="trailing" secondItem="WNd-rr-cQd" secondAttribute="trailing" id="Lu2-r1-SGF"/>
+                <constraint firstAttribute="trailing" secondItem="b00-K8-vWs" secondAttribute="trailing" id="Ub4-Pj-hvj"/>
+                <constraint firstItem="WNd-rr-cQd" firstAttribute="leading" secondItem="NKZ-aZ-G5Z" secondAttribute="leading" id="UhP-44-5uq"/>
+                <constraint firstAttribute="bottom" secondItem="b00-K8-vWs" secondAttribute="bottom" id="lfZ-qu-ILO"/>
+                <constraint firstAttribute="bottom" secondItem="WNd-rr-cQd" secondAttribute="bottom" id="uPq-mW-6Ep"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="330" y="-43"/>
+        </view>
+        <view contentMode="scaleToFill" id="ujE-ok-dGP">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="224"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NGURU-01 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="ETL-uJ-2kN">
+                    <rect key="frame" x="207" y="51" width="187" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="Jpy-nK-ER5"/>
+                        <constraint firstAttribute="width" constant="187" id="eEa-hW-Jnm"/>
+                    </constraints>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KkE-8j-iyb">
+                    <rect key="frame" x="15" y="179" width="570" height="45"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Q3x-w7-vJW"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fed-dB-7Bi">
+                        <size key="itemSize" width="110" height="35"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="vvB-ZE-NPN"/>
+                        <outlet property="delegate" destination="-1" id="hUe-KC-Pep"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KkE-8j-iyb" firstAttribute="leading" secondItem="ujE-ok-dGP" secondAttribute="leading" constant="15" id="Ls1-Rh-Zql"/>
+                <constraint firstAttribute="bottom" secondItem="KkE-8j-iyb" secondAttribute="bottom" id="b3T-hs-fqz"/>
+                <constraint firstAttribute="trailing" secondItem="KkE-8j-iyb" secondAttribute="trailing" constant="15" id="cWX-c9-joD"/>
+                <constraint firstItem="ETL-uJ-2kN" firstAttribute="centerX" secondItem="ujE-ok-dGP" secondAttribute="centerX" id="pZ8-4u-vJI"/>
+                <constraint firstItem="ETL-uJ-2kN" firstAttribute="top" secondItem="ujE-ok-dGP" secondAttribute="top" constant="51" id="z3t-RY-DeI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="317" y="-507"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NGURU-01 (1)" width="257" height="117"/>
+        <image name="bg" width="320" height="568"/>
+    </resources>
+</document>

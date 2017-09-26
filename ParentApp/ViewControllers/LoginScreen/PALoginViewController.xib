@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PALoginViewController">
+            <connections>
+                <outlet property="helpButton" destination="3uh-5J-g2A" id="04K-Ht-heA"/>
+                <outlet property="loginHeaderView" destination="P2y-NQ-6Qt" id="WHE-my-tww"/>
+                <outlet property="loginTableView" destination="2R0-Xh-wNm" id="LEw-ox-y1f"/>
+                <outlet property="schoolNickNameCollectionView" destination="VIu-Q1-DDg" id="l1G-Ka-eFA"/>
+                <outlet property="schoolURL" destination="NSZ-Fm-Ieg" id="zn7-N0-vgQ"/>
+                <outlet property="view" destination="ufH-u8-bgt" id="gr0-Mu-eiB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ufH-u8-bgt">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ntl-19-mnZ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2R0-Xh-wNm" customClass="TPKeyboardAvoidingTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="uwY-k4-iuv">
+                        <rect key="frame" x="0.0" y="432" width="600" height="168"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysU-4e-SbE">
+                                <rect key="frame" x="25" y="24" width="550" height="40"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.70196078429999997" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="I0b-Ok-XK7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352939999995" green="0.86274509799999999" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="-1" eventType="touchUpInside" id="rcU-dW-uYW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV5-rL-YsC">
+                                <rect key="frame" x="25" y="78" width="550" height="40"/>
+                                <color key="backgroundColor" red="0.33333333329999998" green="0.41960784309999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mzg-mc-57j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="15"/>
+                                <state key="normal" title="Add School">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352939999995" green="0.86274509799999999" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addSchoolButtonAction:" destination="-1" eventType="touchUpInside" id="OK0-32-4Ka"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3uh-5J-g2A">
+                                <rect key="frame" x="529" y="0.0" width="46" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Bjh-ap-4Pe"/>
+                                    <constraint firstAttribute="height" constant="17" id="VXt-81-MLc"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Hint">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.047337582236842105" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" metaFont="system"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="helpButtonAction:" destination="-1" eventType="touchUpInside" id="JYe-qI-Q8E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ysU-4e-SbE" firstAttribute="leading" secondItem="uwY-k4-iuv" secondAttribute="leading" constant="25" id="8rI-yp-Lcf"/>
+                            <constraint firstItem="oV5-rL-YsC" firstAttribute="top" secondItem="ysU-4e-SbE" secondAttribute="bottom" constant="14" id="FFw-CP-ytl"/>
+                            <constraint firstItem="ysU-4e-SbE" firstAttribute="top" secondItem="uwY-k4-iuv" secondAttribute="top" constant="24" id="OtV-br-4og"/>
+                            <constraint firstItem="oV5-rL-YsC" firstAttribute="leading" secondItem="uwY-k4-iuv" secondAttribute="leading" constant="25" id="ldO-yk-dwv"/>
+                            <constraint firstAttribute="trailing" secondItem="ysU-4e-SbE" secondAttribute="trailing" constant="25" id="me6-pJ-aaz"/>
+                            <constraint firstItem="ysU-4e-SbE" firstAttribute="top" secondItem="3uh-5J-g2A" secondAttribute="bottom" constant="7" id="mx7-Iv-a0J"/>
+                            <constraint firstAttribute="trailing" secondItem="oV5-rL-YsC" secondAttribute="trailing" constant="25" id="x5e-bE-IXM"/>
+                            <constraint firstAttribute="trailing" secondItem="3uh-5J-g2A" secondAttribute="trailing" constant="25" id="zmJ-3P-MaB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="GBG-gP-vY9"/>
+                        <outlet property="delegate" destination="-1" id="Ff5-n1-JP0"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2R0-Xh-wNm" firstAttribute="leading" secondItem="ufH-u8-bgt" secondAttribute="leading" id="Rgg-ln-3gY"/>
+                <constraint firstItem="Ntl-19-mnZ" firstAttribute="top" secondItem="ufH-u8-bgt" secondAttribute="top" id="gji-jG-wKt"/>
+                <constraint firstItem="2R0-Xh-wNm" firstAttribute="top" secondItem="ufH-u8-bgt" secondAttribute="top" id="qjQ-O1-O8I"/>
+                <constraint firstAttribute="bottom" secondItem="2R0-Xh-wNm" secondAttribute="bottom" id="r8T-AQ-iOB"/>
+                <constraint firstItem="Ntl-19-mnZ" firstAttribute="leading" secondItem="ufH-u8-bgt" secondAttribute="leading" id="sDR-if-c6G"/>
+                <constraint firstAttribute="bottom" secondItem="Ntl-19-mnZ" secondAttribute="bottom" id="sf3-Ht-nUj"/>
+                <constraint firstAttribute="trailing" secondItem="Ntl-19-mnZ" secondAttribute="trailing" id="tgo-w9-d9p"/>
+                <constraint firstAttribute="trailing" secondItem="2R0-Xh-wNm" secondAttribute="trailing" id="vZn-IJ-ezd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="317" y="-26"/>
+        </view>
+        <view contentMode="scaleToFill" id="P2y-NQ-6Qt">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="224"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NGURU-01 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="NSZ-Fm-Ieg">
+                    <rect key="frame" x="207" y="51" width="187" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="fed-aF-DKD"/>
+                        <constraint firstAttribute="width" constant="187" id="mje-3h-WVp"/>
+                    </constraints>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VIu-Q1-DDg">
+                    <rect key="frame" x="15" y="179" width="570" height="45"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="7Xw-gT-fVd"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="oBh-PN-eHT">
+                        <size key="itemSize" width="110" height="35"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="aA5-Px-mgv"/>
+                        <outlet property="delegate" destination="-1" id="QO7-jG-2ex"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NSZ-Fm-Ieg" firstAttribute="centerX" secondItem="P2y-NQ-6Qt" secondAttribute="centerX" id="0lF-FD-UWh"/>
+                <constraint firstAttribute="trailing" secondItem="VIu-Q1-DDg" secondAttribute="trailing" constant="15" id="Uwe-yk-2Fy"/>
+                <constraint firstItem="VIu-Q1-DDg" firstAttribute="leading" secondItem="P2y-NQ-6Qt" secondAttribute="leading" constant="15" id="iU9-Rx-aiZ"/>
+                <constraint firstAttribute="bottom" secondItem="VIu-Q1-DDg" secondAttribute="bottom" id="wWD-nT-OzJ"/>
+                <constraint firstItem="NSZ-Fm-Ieg" firstAttribute="top" secondItem="P2y-NQ-6Qt" secondAttribute="top" constant="51" id="zdI-qA-rlX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="317" y="-507"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NGURU-01 (1)" width="257" height="117"/>
+        <image name="bg" width="320" height="568"/>
+    </resources>
+</document>

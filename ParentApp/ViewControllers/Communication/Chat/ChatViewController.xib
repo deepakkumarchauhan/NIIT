@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController">
+            <connections>
+                <outlet property="buttonConstraint" destination="VHp-ug-jNG" id="Da6-nJ-oD1"/>
+                <outlet property="chatTableView" destination="eNy-OM-s8f" id="Ac2-jW-O2i"/>
+                <outlet property="placeHolderLabel" destination="rks-em-baj" id="r7q-1j-znY"/>
+                <outlet property="replyTextview" destination="q9j-yD-CfZ" id="Aji-Yz-VgG"/>
+                <outlet property="sendButton" destination="mbC-Is-nWT" id="1Lj-Mx-FS4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNt-ub-zc1">
+                    <rect key="frame" x="0.0" y="555" width="600" height="45"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q9j-yD-CfZ">
+                            <rect key="frame" x="8" y="5" width="515" height="35"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="luK-p6-9Dl"/>
+                            </connections>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write text.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rks-em-baj">
+                            <rect key="frame" x="14" y="12" width="509" height="21"/>
+                            <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbC-Is-nWT">
+                            <rect key="frame" x="531" y="8" width="61" height="30"/>
+                            <color key="backgroundColor" red="0.2156862745" green="0.70196078429999997" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="1Uq-yg-MTc"/>
+                                <constraint firstAttribute="width" constant="61" id="Eud-zQ-vQ6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="16"/>
+                            <state key="normal" title="Send">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="sendButtonAction:" destination="-1" eventType="touchUpInside" id="Zhh-xo-mf9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rks-em-baj" secondAttribute="bottom" constant="12" id="2WT-Vo-XuI"/>
+                        <constraint firstItem="mbC-Is-nWT" firstAttribute="top" secondItem="iNt-ub-zc1" secondAttribute="top" constant="8" id="B16-hs-Tfk"/>
+                        <constraint firstAttribute="height" constant="45" id="EKJ-k9-QFT"/>
+                        <constraint firstItem="rks-em-baj" firstAttribute="top" secondItem="iNt-ub-zc1" secondAttribute="top" constant="12" id="Grh-fr-Ovd"/>
+                        <constraint firstItem="q9j-yD-CfZ" firstAttribute="top" secondItem="iNt-ub-zc1" secondAttribute="top" constant="5" id="Kzo-yz-kf4"/>
+                        <constraint firstItem="q9j-yD-CfZ" firstAttribute="leading" secondItem="iNt-ub-zc1" secondAttribute="leading" constant="8" id="T5b-kq-DX9"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="e3Q-Qf-ckY"/>
+                        <constraint firstItem="mbC-Is-nWT" firstAttribute="leading" secondItem="q9j-yD-CfZ" secondAttribute="trailing" constant="8" id="g6f-Jp-Lq1"/>
+                        <constraint firstAttribute="trailing" secondItem="mbC-Is-nWT" secondAttribute="trailing" constant="8" id="lQq-z2-dJF"/>
+                        <constraint firstAttribute="bottom" secondItem="q9j-yD-CfZ" secondAttribute="bottom" constant="5" id="m6h-Ti-eQQ"/>
+                        <constraint firstItem="rks-em-baj" firstAttribute="leading" secondItem="iNt-ub-zc1" secondAttribute="leading" constant="14" id="s4n-Ac-Gbi"/>
+                        <constraint firstItem="mbC-Is-nWT" firstAttribute="leading" secondItem="rks-em-baj" secondAttribute="trailing" constant="8" id="sSV-1I-sdT"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eNy-OM-s8f" customClass="TPKeyboardAvoidingTableView">
+                    <rect key="frame" x="0.0" y="6" width="600" height="548"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yYu-m2-nU8"/>
+                        <outlet property="delegate" destination="-1" id="dwV-aa-P7n"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nge-lS-f9h">
+                    <rect key="frame" x="0.0" y="555" width="600" height="1"/>
+                    <color key="backgroundColor" red="0.72156862745098038" green="0.72156862745098038" blue="0.72156862745098038" alpha="0.75469805743243246" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="2qi-NP-LP1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iNt-ub-zc1" firstAttribute="top" secondItem="eNy-OM-s8f" secondAttribute="bottom" constant="1" id="Fby-1W-HhN"/>
+                <constraint firstItem="iNt-ub-zc1" firstAttribute="top" secondItem="Nge-lS-f9h" secondAttribute="bottom" constant="-1" id="MyP-xH-Nly"/>
+                <constraint firstAttribute="trailing" secondItem="iNt-ub-zc1" secondAttribute="trailing" id="PNk-OI-XFS"/>
+                <constraint firstAttribute="bottom" secondItem="iNt-ub-zc1" secondAttribute="bottom" id="VHp-ug-jNG"/>
+                <constraint firstAttribute="trailing" secondItem="Nge-lS-f9h" secondAttribute="trailing" id="ehy-8L-lBM"/>
+                <constraint firstItem="eNy-OM-s8f" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gja-QB-mjW"/>
+                <constraint firstItem="eNy-OM-s8f" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="6" id="ibd-k4-BwP"/>
+                <constraint firstItem="iNt-ub-zc1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rAz-B5-azq"/>
+                <constraint firstAttribute="trailing" secondItem="eNy-OM-s8f" secondAttribute="trailing" id="rYt-lY-Knj"/>
+                <constraint firstItem="Nge-lS-f9h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xfO-8U-kZz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="393" y="250"/>
+        </view>
+    </objects>
+</document>

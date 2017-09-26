@@ -1,0 +1,23 @@
+PODS:
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.2.0):
+    - GoogleMaps/Base (= 2.2.0)
+  - OpenSSL (1.0.210)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
+  - OpenSSL
+
+SPEC CHECKSUMS:
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
+  OpenSSL: 246ffb948e9d56466727fd318134af35f5aa764e
+
+PODFILE CHECKSUM: 7e2f53cf72717cc926bc1ef33bffe5e69b06cbf6
+
+COCOAPODS: 1.2.0

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AssignmentContentVC">
+            <connections>
+                <outlet property="fileContentWebView" destination="tqw-xR-aSF" id="mhX-NL-ugd"/>
+                <outlet property="indicator" destination="j0h-ZU-p06" id="z4f-wf-fKx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tqw-xR-aSF">
+                    <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Ju1-2z-wA4"/>
+                    </connections>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="j0h-ZU-p06">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Akq-gG-ZoB"/>
+                        <constraint firstAttribute="width" constant="20" id="yji-RJ-1OM"/>
+                    </constraints>
+                    <color key="color" red="0.1764705882" green="0.67843137249999996" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tqw-xR-aSF" secondAttribute="bottom" id="0wz-TZ-Hsh"/>
+                <constraint firstItem="j0h-ZU-p06" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="AIE-S0-cXo"/>
+                <constraint firstAttribute="trailing" secondItem="tqw-xR-aSF" secondAttribute="trailing" id="N5J-81-Iis"/>
+                <constraint firstItem="j0h-ZU-p06" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tf3-8O-6Cb"/>
+                <constraint firstItem="tqw-xR-aSF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iIn-lk-ktz"/>
+                <constraint firstItem="tqw-xR-aSF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t0A-fl-du2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

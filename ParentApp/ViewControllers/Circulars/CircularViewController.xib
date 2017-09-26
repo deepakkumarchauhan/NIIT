@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-bold.ttf">
+            <string>Relay-Bold</string>
+        </array>
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CircularViewController">
+            <connections>
+                <outlet property="circularTableView" destination="Xkf-PY-iAu" id="JsW-cJ-DYG"/>
+                <outlet property="currentButton" destination="DRu-vv-mcN" id="8yL-e2-JyM"/>
+                <outlet property="monthPickerButton" destination="aZl-Uo-c9R" id="ed8-jR-wwr"/>
+                <outlet property="previousButton" destination="SI8-VP-bMt" id="STO-qq-9o4"/>
+                <outlet property="seeMoreButton" destination="Ks5-iu-TeQ" id="sfu-1R-ffn"/>
+                <outlet property="segmentView" destination="aI0-jQ-TY0" id="cBS-a0-NrJ"/>
+                <outlet property="tableViewTopConstraint" destination="OZT-7c-GbV" id="jLq-id-6eD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aI0-jQ-TY0">
+                    <rect key="frame" x="17" y="12" width="566" height="35"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-vv-mcN">
+                            <rect key="frame" x="3" y="3" width="280" height="29"/>
+                            <color key="backgroundColor" red="0.1764705882" green="0.68235294120000001" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="nVu-lI-zcW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Relay-Bold" family="Relay-Bold" pointSize="17"/>
+                            <state key="normal" title="Current">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBouunds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="segmentBtnAction:" destination="-1" eventType="touchUpInside" id="Ba8-vl-jHP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI8-VP-bMt">
+                            <rect key="frame" x="283" y="3" width="280" height="29"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="aEe-ra-Vtt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Relay-Bold" family="Relay-Bold" pointSize="17"/>
+                            <state key="normal" title="Previous">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBouunds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="segmentBtnAction:" destination="-1" eventType="touchUpInside" id="Pdt-vw-YrU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.33333333329999998" green="0.41960784309999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="SI8-VP-bMt" secondAttribute="trailing" constant="3" id="0re-nW-FFf"/>
+                        <constraint firstItem="SI8-VP-bMt" firstAttribute="leading" secondItem="DRu-vv-mcN" secondAttribute="trailing" id="Cmq-67-FBc"/>
+                        <constraint firstItem="DRu-vv-mcN" firstAttribute="top" secondItem="aI0-jQ-TY0" secondAttribute="top" constant="3" id="HKy-bw-RXp"/>
+                        <constraint firstItem="SI8-VP-bMt" firstAttribute="width" secondItem="DRu-vv-mcN" secondAttribute="width" id="IAN-Bx-lDf"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="M8h-s1-QNC"/>
+                        <constraint firstItem="SI8-VP-bMt" firstAttribute="height" secondItem="DRu-vv-mcN" secondAttribute="height" id="P8Z-9Y-23H"/>
+                        <constraint firstItem="DRu-vv-mcN" firstAttribute="leading" secondItem="aI0-jQ-TY0" secondAttribute="leading" constant="3" id="ZtA-Lc-L2o"/>
+                        <constraint firstAttribute="height" constant="35" id="ovp-zH-IS1"/>
+                        <constraint firstItem="SI8-VP-bMt" firstAttribute="top" secondItem="aI0-jQ-TY0" secondAttribute="top" constant="3" id="ywD-oc-g1z"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZl-Uo-c9R">
+                    <rect key="frame" x="17" y="60" width="566" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="EIA-GS-rXs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="monthPickerButonAction:" destination="-1" eventType="touchUpInside" id="fGe-Kh-xvL"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dd" translatesAutoresizingMaskIntoConstraints="NO" id="dj4-VI-Qdv">
+                    <rect key="frame" x="560" y="74" width="15" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="VXX-qf-9ee"/>
+                        <constraint firstAttribute="height" constant="10" id="vVB-4r-1MD"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xkf-PY-iAu">
+                    <rect key="frame" x="0.0" y="112" width="600" height="488"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ks5-iu-TeQ">
+                    <rect key="frame" x="490" y="560" width="90" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="fuf-AW-Elv"/>
+                        <constraint firstAttribute="width" constant="90" id="t5B-BR-eER"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Relay-Bold" family="Relay-Bold" pointSize="17"/>
+                    <state key="normal" title="See more...">
+                        <color key="titleColor" red="0.050980392156862744" green="0.69803921568627447" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="seeMoreButtonAction:" destination="-1" eventType="touchUpInside" id="VDp-UK-mx3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ks5-iu-TeQ" secondAttribute="trailing" constant="20" id="BYn-8j-3J0"/>
+                <constraint firstAttribute="trailing" secondItem="Xkf-PY-iAu" secondAttribute="trailing" id="EUo-30-nKV"/>
+                <constraint firstAttribute="bottom" secondItem="Ks5-iu-TeQ" secondAttribute="bottom" constant="10" id="HtC-fe-kGv"/>
+                <constraint firstItem="dj4-VI-Qdv" firstAttribute="leading" secondItem="aZl-Uo-c9R" secondAttribute="trailing" constant="-23" id="MJV-nN-Qju"/>
+                <constraint firstAttribute="trailing" secondItem="aZl-Uo-c9R" secondAttribute="trailing" constant="17" id="OK4-4v-LSA"/>
+                <constraint firstItem="Xkf-PY-iAu" firstAttribute="top" secondItem="aI0-jQ-TY0" secondAttribute="bottom" constant="65" id="OZT-7c-GbV"/>
+                <constraint firstItem="Xkf-PY-iAu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ty6-fw-32a"/>
+                <constraint firstItem="aI0-jQ-TY0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="Uih-YV-Ql7"/>
+                <constraint firstAttribute="bottom" secondItem="Xkf-PY-iAu" secondAttribute="bottom" id="Zgu-Ed-EEW"/>
+                <constraint firstItem="aI0-jQ-TY0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="hnp-5R-0XL"/>
+                <constraint firstItem="aZl-Uo-c9R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="kq2-S3-D3I"/>
+                <constraint firstItem="aZl-Uo-c9R" firstAttribute="top" secondItem="aI0-jQ-TY0" secondAttribute="bottom" constant="13" id="q1C-71-ukE"/>
+                <constraint firstAttribute="trailing" secondItem="aI0-jQ-TY0" secondAttribute="trailing" constant="17" id="q6j-NB-1vW"/>
+                <constraint firstItem="dj4-VI-Qdv" firstAttribute="top" secondItem="aZl-Uo-c9R" secondAttribute="bottom" constant="-26" id="rpV-lm-uGf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="73" y="73"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dd" width="14" height="8"/>
+    </resources>
+</document>

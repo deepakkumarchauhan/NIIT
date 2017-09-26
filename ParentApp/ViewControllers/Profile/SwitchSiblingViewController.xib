@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwitchSiblingViewController">
+            <connections>
+                <outlet property="collectionViewLeftConstraint" destination="ebI-b3-wiP" id="XBR-JO-6aE"/>
+                <outlet property="collectionViewRightConstraint" destination="dWN-wv-TZp" id="xru-hX-ey3"/>
+                <outlet property="logoImageView" destination="GS9-qg-aMb" id="I9X-ye-vcT"/>
+                <outlet property="siblingsCollectionView" destination="WaK-cp-lTE" id="UKw-GO-YPI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WaK-cp-lTE">
+                    <rect key="frame" x="45" y="190" width="510" height="396"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cbl-D7-H1i">
+                        <size key="itemSize" width="130" height="130"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NGURU-01 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="GS9-qg-aMb">
+                    <rect key="frame" x="207" y="63" width="187" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="qFK-Wg-4tY"/>
+                        <constraint firstAttribute="width" constant="187" id="xyF-0H-Yt9"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GS9-qg-aMb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9kV-qp-Ubi"/>
+                <constraint firstItem="GS9-qg-aMb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="63" id="NOb-Te-S2o"/>
+                <constraint firstAttribute="bottom" secondItem="WaK-cp-lTE" secondAttribute="bottom" constant="14" id="Wba-w4-t1E"/>
+                <constraint firstAttribute="trailing" secondItem="WaK-cp-lTE" secondAttribute="trailing" constant="45" id="dWN-wv-TZp"/>
+                <constraint firstItem="WaK-cp-lTE" firstAttribute="top" secondItem="GS9-qg-aMb" secondAttribute="bottom" constant="52" id="dgd-aR-73q"/>
+                <constraint firstItem="WaK-cp-lTE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="ebI-b3-wiP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NGURU-01 (1)" width="257" height="117"/>
+    </resources>
+</document>

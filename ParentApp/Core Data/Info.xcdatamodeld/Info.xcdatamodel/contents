@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Xcode 7.0">
+    <entity name="Info" representedClassName="Info" syncable="YES">
+        <attribute name="childID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endSessionDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isLoginValidated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="nickName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolLogoURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startSessionDate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Info" positionX="-63" positionY="-18" width="128" height="195"/>
+    </elements>
+</model>

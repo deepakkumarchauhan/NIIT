@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PAMenuScreen">
+            <connections>
+                <outlet property="headerTableView" destination="ecg-rd-Hrf" id="ggK-tw-V59"/>
+                <outlet property="hieghtConstraints" destination="tYQ-5d-NEO" id="E9w-dr-l5s"/>
+                <outlet property="studentImage" destination="6tN-BX-CH1" id="sq8-I5-91t"/>
+                <outlet property="studentName" destination="rLJ-0V-1lk" id="Jqv-Bj-6xJ"/>
+                <outlet property="tableView" destination="DMX-ff-0mt" id="ALc-V2-22s"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecg-rd-Hrf">
+                    <rect key="frame" x="0.0" y="0.0" width="122" height="166"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="rLJ-0V-1lk">
+                            <rect key="frame" x="1" y="143" width="121" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="51Q-ek-JI7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tN-BX-CH1">
+                            <rect key="frame" x="1" y="71" width="122" height="93"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="93" id="5CK-eO-XV7"/>
+                            </constraints>
+                            <connections>
+                                <action selector="profileButtonAction:" destination="-1" eventType="touchUpInside" id="nHz-Ir-3vd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="6tN-BX-CH1" secondAttribute="trailing" constant="-1" id="9uG-Kh-gH3"/>
+                        <constraint firstAttribute="bottom" secondItem="6tN-BX-CH1" secondAttribute="bottom" constant="2" id="CEe-Qo-Dbo"/>
+                        <constraint firstAttribute="trailing" secondItem="rLJ-0V-1lk" secondAttribute="trailing" id="Dgd-oD-yBr"/>
+                        <constraint firstAttribute="bottom" secondItem="rLJ-0V-1lk" secondAttribute="bottom" constant="2" id="Nz5-0R-6lg"/>
+                        <constraint firstItem="rLJ-0V-1lk" firstAttribute="leading" secondItem="ecg-rd-Hrf" secondAttribute="leading" constant="1" id="hPn-FJ-VgL"/>
+                        <constraint firstItem="6tN-BX-CH1" firstAttribute="leading" secondItem="ecg-rd-Hrf" secondAttribute="leading" constant="1" id="m4G-FO-I3Z"/>
+                        <constraint firstAttribute="height" constant="166" id="tYQ-5d-NEO"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DMX-ff-0mt">
+                    <rect key="frame" x="0.0" y="164" width="122" height="436"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="CTO-Za-6xj"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="cLv-SS-TqE"/>
+                        <outlet property="delegate" destination="-1" id="Hc3-ad-ivd"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.33333333333333331" green="0.41960784313725491" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ecg-rd-Hrf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4na-Za-fY7"/>
+                <constraint firstItem="DMX-ff-0mt" firstAttribute="top" secondItem="6tN-BX-CH1" secondAttribute="bottom" id="MTt-tO-EON"/>
+                <constraint firstItem="ecg-rd-Hrf" firstAttribute="trailing" secondItem="DMX-ff-0mt" secondAttribute="trailing" id="Ojq-S2-C41"/>
+                <constraint firstItem="DMX-ff-0mt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="S8J-eh-GsG"/>
+                <constraint firstItem="ecg-rd-Hrf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="V7j-0D-5FN"/>
+                <constraint firstAttribute="bottom" secondItem="DMX-ff-0mt" secondAttribute="bottom" id="oss-y2-smK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StudentProfileVC">
+            <connections>
+                <outlet property="profileImageView" destination="yrN-y6-QfJ" id="W7L-2w-DcF"/>
+                <outlet property="rootTableFooterView" destination="XzJ-9p-QEY" id="F9D-cT-3MK"/>
+                <outlet property="rootTableHeaderView" destination="HHU-gJ-iVE" id="aB2-FU-0GM"/>
+                <outlet property="rootTableView" destination="0C0-vU-bg2" id="wKQ-tQ-4Nn"/>
+                <outlet property="studentDetailTableView" destination="rhz-CA-mus" id="N7N-we-MRF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0C0-vU-bg2">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zHr-Te-Xir"/>
+                        <outlet property="delegate" destination="-1" id="HIA-Dv-1z1"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0C0-vU-bg2" secondAttribute="bottom" id="IVC-KR-INi"/>
+                <constraint firstItem="0C0-vU-bg2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UvO-bd-ORf"/>
+                <constraint firstAttribute="trailing" secondItem="0C0-vU-bg2" secondAttribute="trailing" id="kWL-hq-q24"/>
+                <constraint firstItem="0C0-vU-bg2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zVx-g8-Rhb"/>
+            </constraints>
+            <point key="canvasLocation" x="-333" y="227"/>
+        </view>
+        <view contentMode="scaleToFill" id="HHU-gJ-iVE">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95j-BV-FJa">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVf-sr-mev">
+                            <rect key="frame" x="244" y="8" width="112" height="112"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic" translatesAutoresizingMaskIntoConstraints="NO" id="yrN-y6-QfJ">
+                                    <rect key="frame" x="1" y="1" width="110" height="110"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="52"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="yrN-y6-QfJ" firstAttribute="leading" secondItem="NVf-sr-mev" secondAttribute="leading" constant="1" id="WJQ-F2-Te6"/>
+                                <constraint firstAttribute="bottom" secondItem="yrN-y6-QfJ" secondAttribute="bottom" constant="1" id="WTO-6d-ogm"/>
+                                <constraint firstAttribute="trailing" secondItem="yrN-y6-QfJ" secondAttribute="trailing" constant="1" id="XEx-e4-bPG"/>
+                                <constraint firstAttribute="height" constant="112" id="naF-bu-qUL"/>
+                                <constraint firstItem="yrN-y6-QfJ" firstAttribute="top" secondItem="NVf-sr-mev" secondAttribute="top" constant="1" id="qsb-Bg-vQQ"/>
+                                <constraint firstAttribute="width" constant="112" id="wOY-Ki-dnB"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="52"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="NVf-sr-mev" firstAttribute="top" secondItem="95j-BV-FJa" secondAttribute="top" constant="8" id="R98-6p-i2y"/>
+                        <constraint firstItem="NVf-sr-mev" firstAttribute="centerX" secondItem="95j-BV-FJa" secondAttribute="centerX" id="fE1-hd-G9L"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="95j-BV-FJa" secondAttribute="trailing" id="4Tr-fg-dNl"/>
+                <constraint firstAttribute="bottom" secondItem="95j-BV-FJa" secondAttribute="bottom" id="Ba1-VM-oCc"/>
+                <constraint firstItem="95j-BV-FJa" firstAttribute="leading" secondItem="HHU-gJ-iVE" secondAttribute="leading" id="GSD-Bo-1d2"/>
+                <constraint firstItem="95j-BV-FJa" firstAttribute="top" secondItem="HHU-gJ-iVE" secondAttribute="top" id="Rxa-c7-d7D"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-333" y="-189"/>
+        </view>
+        <view contentMode="scaleToFill" id="XzJ-9p-QEY">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" tag="11" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhz-CA-mus" customClass="TPKeyboardAvoidingTableView">
+                    <rect key="frame" x="32" y="8" width="536" height="358"/>
+                    <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mTe-Pz-HLd"/>
+                        <outlet property="delegate" destination="-1" id="IDP-gW-iEa"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rhz-CA-mus" firstAttribute="leading" secondItem="XzJ-9p-QEY" secondAttribute="leading" constant="32" id="7gr-Mj-3md"/>
+                <constraint firstAttribute="bottom" secondItem="rhz-CA-mus" secondAttribute="bottom" constant="54" id="98e-Sf-g7P"/>
+                <constraint firstAttribute="trailing" secondItem="rhz-CA-mus" secondAttribute="trailing" constant="32" id="B7u-Ei-LfZ"/>
+                <constraint firstItem="rhz-CA-mus" firstAttribute="top" secondItem="XzJ-9p-QEY" secondAttribute="top" constant="8" id="mNS-7j-mr6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-333" y="796"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pic" width="78" height="79"/>
+    </resources>
+</document>

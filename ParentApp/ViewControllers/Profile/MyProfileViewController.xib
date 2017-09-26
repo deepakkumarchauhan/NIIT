@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyProfileViewController">
+            <connections>
+                <outlet property="changePasswordButton" destination="90G-OL-wko" id="MuI-oW-ps6"/>
+                <outlet property="profileHeaderView" destination="ujT-qz-9vw" id="VbS-3f-94Z"/>
+                <outlet property="profileImageView" destination="1mR-Qv-IH0" id="IXV-EX-iLC"/>
+                <outlet property="profileTableView" destination="vzN-3N-zzE" id="pPb-bH-n9Q"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="vzN-3N-zzE" customClass="TPKeyboardAvoidingTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="separatorInset" minX="10" minY="0.0" maxX="30" maxY="0.0"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vzN-3N-zzE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8vs-IW-fbK"/>
+                <constraint firstAttribute="bottom" secondItem="vzN-3N-zzE" secondAttribute="bottom" id="Odc-Ym-TlB"/>
+                <constraint firstItem="vzN-3N-zzE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Srs-kZ-LVJ"/>
+                <constraint firstAttribute="trailing" secondItem="vzN-3N-zzE" secondAttribute="trailing" id="fFI-9r-hwy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="323" y="160"/>
+        </view>
+        <view contentMode="scaleToFill" id="ujT-qz-9vw">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1mR-Qv-IH0">
+                    <rect key="frame" x="240" y="15" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="Qke-Dr-ggK"/>
+                        <constraint firstAttribute="height" constant="120" id="aYt-oI-aoS"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90G-OL-wko">
+                    <rect key="frame" x="489" y="112" width="105" height="30"/>
+                    <color key="backgroundColor" red="0.2156862745" green="0.70196078429999997" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Ubp-a3-NbL"/>
+                        <constraint firstAttribute="width" constant="105" id="wTC-95-JA2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="13"/>
+                    <state key="normal" title="Change Password">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="changePasswordButtonAction:" destination="-1" eventType="touchUpInside" id="7af-v0-bsM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="90G-OL-wko" secondAttribute="trailing" constant="6" id="DFw-Is-PRe"/>
+                <constraint firstItem="1mR-Qv-IH0" firstAttribute="centerY" secondItem="ujT-qz-9vw" secondAttribute="centerY" id="Z9B-BD-bv6"/>
+                <constraint firstAttribute="bottom" secondItem="90G-OL-wko" secondAttribute="bottom" constant="8" id="c4U-Vn-b50"/>
+                <constraint firstItem="1mR-Qv-IH0" firstAttribute="centerX" secondItem="ujT-qz-9vw" secondAttribute="centerX" id="k0n-R4-4JQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="323" y="-266"/>
+        </view>
+    </objects>
+</document>

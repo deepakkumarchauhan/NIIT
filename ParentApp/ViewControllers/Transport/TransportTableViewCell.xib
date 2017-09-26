@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TransportTableViewCell" rowHeight="37" id="KGk-i7-Jjw" customClass="TransportTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="34"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4t-cy-TIk">
+                        <rect key="frame" x="10" y="5" width="283" height="25"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="11"/>
+                        <color key="textColor" red="0.2274509804" green="0.67843137249999996" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeK-vx-je1">
+                        <rect key="frame" x="298" y="7" width="5" height="21"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="fns-sF-WEC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucN-Gb-Vq9">
+                        <rect key="frame" x="311" y="5" width="276" height="25"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="11"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="NeK-vx-je1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="AH1-yj-Chj"/>
+                    <constraint firstItem="S4t-cy-TIk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="GKY-oJ-E4z"/>
+                    <constraint firstAttribute="bottom" secondItem="ucN-Gb-Vq9" secondAttribute="bottom" constant="4" id="Sck-7u-MWr"/>
+                    <constraint firstItem="S4t-cy-TIk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="aeN-nF-xNX"/>
+                    <constraint firstAttribute="bottom" secondItem="NeK-vx-je1" secondAttribute="bottom" constant="6" id="eJ7-vo-SEr"/>
+                    <constraint firstItem="NeK-vx-je1" firstAttribute="leading" secondItem="S4t-cy-TIk" secondAttribute="trailing" constant="5" id="hve-Zq-2lU"/>
+                    <constraint firstAttribute="bottom" secondItem="S4t-cy-TIk" secondAttribute="bottom" constant="4" id="kA9-c9-9bp"/>
+                    <constraint firstItem="NeK-vx-je1" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="khg-bO-mDc"/>
+                    <constraint firstItem="ucN-Gb-Vq9" firstAttribute="leading" secondItem="NeK-vx-je1" secondAttribute="trailing" constant="8" id="lwf-lS-RE9"/>
+                    <constraint firstItem="ucN-Gb-Vq9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="tXn-1x-31i"/>
+                    <constraint firstAttribute="trailing" secondItem="ucN-Gb-Vq9" secondAttribute="trailing" constant="13" id="v1d-Nk-viz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="detailLabel" destination="ucN-Gb-Vq9" id="Noj-tB-IJ9"/>
+                <outlet property="titleLabel" destination="S4t-cy-TIk" id="Pb4-Uo-A2e"/>
+            </connections>
+            <point key="canvasLocation" x="237" y="165.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-bold.ttf">
+            <string>Relay-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowDescriptionWebView">
+            <connections>
+                <outlet property="crossButton" destination="S8N-dc-k4N" id="sgp-j2-23p"/>
+                <outlet property="descriptionWebView" destination="U4p-OO-788" id="ndh-GI-ukZ"/>
+                <outlet property="heightConstraint" destination="riQ-GC-qXO" id="0wS-H1-lOW"/>
+                <outlet property="indicator" destination="t9E-2L-FIX" id="8OL-X1-m40"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView clipsSubviews="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4p-OO-788">
+                    <rect key="frame" x="160" y="250" width="280" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="j0G-Jy-xVa"/>
+                        <constraint firstAttribute="height" constant="100" id="riQ-GC-qXO"/>
+                    </constraints>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="t9E-2L-FIX">
+                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Z0g-sA-4he"/>
+                        <constraint firstAttribute="height" constant="20" id="i2F-Fh-pYd"/>
+                    </constraints>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="S8N-dc-k4N">
+                    <rect key="frame" x="428" y="230" width="25" height="25"/>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="aEW-mb-rsc"/>
+                        <constraint firstAttribute="height" constant="25" id="mJp-36-x1I"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Relay-Bold" family="Relay-Bold" pointSize="20"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="crossAction:" destination="-1" eventType="touchUpInside" id="XFo-Jf-8yJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.59317484662576692" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="t9E-2L-FIX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7dk-8a-GPm"/>
+                <constraint firstItem="S8N-dc-k4N" firstAttribute="leading" secondItem="U4p-OO-788" secondAttribute="trailing" constant="-12" id="EyK-1w-Dw6"/>
+                <constraint firstItem="U4p-OO-788" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uiq-OR-AJ0"/>
+                <constraint firstItem="U4p-OO-788" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZCW-9g-flt"/>
+                <constraint firstItem="t9E-2L-FIX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="naY-cw-n8N"/>
+                <constraint firstItem="U4p-OO-788" firstAttribute="top" secondItem="S8N-dc-k4N" secondAttribute="bottom" constant="-5" id="paT-03-sRD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

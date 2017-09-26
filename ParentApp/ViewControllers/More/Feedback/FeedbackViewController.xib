@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackViewController">
+            <connections>
+                <outlet property="feedbackTableView" destination="Sq0-x1-Ggn" id="fYv-OT-rkV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sq0-x1-Ggn" customClass="TPKeyboardAvoidingTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view key="tableHeaderView" contentMode="scaleToFill" id="5qc-xm-Eft">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="148"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NGURU-01 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="KMM-K6-CRk">
+                                <rect key="frame" x="196" y="24" width="208" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="do4-YQ-YRm"/>
+                                    <constraint firstAttribute="height" constant="100" id="lGM-lM-Ihq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KMM-K6-CRk" firstAttribute="top" secondItem="5qc-xm-Eft" secondAttribute="top" constant="24" id="XKc-Rk-sQc"/>
+                            <constraint firstItem="KMM-K6-CRk" firstAttribute="centerX" secondItem="5qc-xm-Eft" secondAttribute="centerX" id="twJ-PF-6I4"/>
+                        </constraints>
+                    </view>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="OZK-vk-fVB">
+                        <rect key="frame" x="0.0" y="526" width="600" height="74"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZK-9D-Vlj">
+                                <rect key="frame" x="25" y="17" width="550" height="40"/>
+                                <color key="backgroundColor" red="0.176255002617836" green="0.67673403024673462" blue="0.97475934028625488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Nom-mM-AQP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="16"/>
+                                <state key="normal" title="Send Feedback">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendFeedbackButtonAction:" destination="-1" eventType="touchUpInside" id="kAJ-TI-ju1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0ZK-9D-Vlj" secondAttribute="trailing" constant="25" id="Koc-il-wah"/>
+                            <constraint firstItem="0ZK-9D-Vlj" firstAttribute="leading" secondItem="OZK-vk-fVB" secondAttribute="leading" constant="25" id="ceK-2K-5mX"/>
+                            <constraint firstItem="0ZK-9D-Vlj" firstAttribute="top" secondItem="OZK-vk-fVB" secondAttribute="top" constant="17" id="t4B-Fh-Qa8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Lzn-cQ-B42"/>
+                        <outlet property="delegate" destination="-1" id="MG5-px-tuW"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Sq0-x1-Ggn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GRW-yO-Dp3"/>
+                <constraint firstAttribute="bottom" secondItem="Sq0-x1-Ggn" secondAttribute="bottom" id="VB9-Jp-cjC"/>
+                <constraint firstAttribute="trailing" secondItem="Sq0-x1-Ggn" secondAttribute="trailing" id="VcE-v6-kPE"/>
+                <constraint firstItem="Sq0-x1-Ggn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lEq-B4-fFJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="30" y="36"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NGURU-01 (1)" width="257" height="117"/>
+    </resources>
+</document>

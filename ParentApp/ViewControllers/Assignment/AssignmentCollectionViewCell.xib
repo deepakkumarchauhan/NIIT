@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AssignmentCollectionViewCell" id="gTV-IL-0wX" customClass="AssignmentCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXm-QA-Dhw">
+                        <rect key="frame" x="0.0" y="42" width="110" height="3"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="3" id="peO-AT-eNJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R67-KG-jkk">
+                        <rect key="frame" x="1" y="2" width="88" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="8Mn-31-7It"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="13"/>
+                        <color key="textColor" red="0.50706281565656552" green="0.50706281565656552" blue="0.50706281565656552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nXm-QA-Dhw" secondAttribute="trailing" constant="-20" id="KqW-k3-QEd"/>
+                <constraint firstAttribute="trailing" secondItem="R67-KG-jkk" secondAttribute="trailing" constant="1" id="Vi1-bq-I0p"/>
+                <constraint firstItem="R67-KG-jkk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="pIv-SE-7EF"/>
+                <constraint firstAttribute="bottom" secondItem="nXm-QA-Dhw" secondAttribute="bottom" id="pgZ-hc-DQ3"/>
+                <constraint firstItem="R67-KG-jkk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="rzZ-qz-6a6"/>
+                <constraint firstItem="nXm-QA-Dhw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vwI-4m-uqe"/>
+            </constraints>
+            <size key="customSize" width="104" height="35"/>
+            <connections>
+                <outlet property="colorLabel" destination="nXm-QA-Dhw" id="NbB-T1-x4v"/>
+                <outlet property="nameOfSubjectLabel" destination="R67-KG-jkk" id="iFr-Ai-w5x"/>
+            </connections>
+            <point key="canvasLocation" x="165" y="129.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

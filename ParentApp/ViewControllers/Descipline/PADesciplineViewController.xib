@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-bold.ttf">
+            <string>Relay-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PADesciplineViewController">
+            <connections>
+                <outlet property="desciplineTableView" destination="oXG-B7-fbH" id="ci2-we-XZX"/>
+                <outlet property="previousButton" destination="GCn-dX-m2r" id="B9J-Lc-1UP"/>
+                <outlet property="recentButton" destination="d7L-BD-ICZ" id="3ng-xs-k2h"/>
+                <outlet property="segmentView" destination="Jpn-fl-oPM" id="Tts-1a-ZEW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jpn-fl-oPM">
+                    <rect key="frame" x="17" y="8" width="566" height="36"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7L-BD-ICZ">
+                            <rect key="frame" x="3" y="3" width="280" height="30"/>
+                            <color key="backgroundColor" red="0.17647058823529413" green="0.68235294117647061" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="43e-gQ-wXR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Relay-Bold" family="Relay-Bold" pointSize="17"/>
+                            <state key="normal" title="Recent">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBouunds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="segmentBtnAction:" destination="-1" eventType="touchUpInside" id="m77-ZR-Upg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCn-dX-m2r">
+                            <rect key="frame" x="283" y="3" width="280" height="30"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="qxV-3d-uuN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Relay-Bold" family="Relay-Bold" pointSize="17"/>
+                            <state key="normal" title="Previous">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBouunds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="segmentBtnAction:" destination="-1" eventType="touchUpInside" id="hiG-lY-hhy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.33333333333333331" green="0.41960784313725491" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="GCn-dX-m2r" firstAttribute="width" secondItem="d7L-BD-ICZ" secondAttribute="width" id="81i-xk-4Ve"/>
+                        <constraint firstItem="GCn-dX-m2r" firstAttribute="leading" secondItem="d7L-BD-ICZ" secondAttribute="trailing" id="ARF-sd-gQA"/>
+                        <constraint firstItem="d7L-BD-ICZ" firstAttribute="top" secondItem="Jpn-fl-oPM" secondAttribute="top" constant="3" id="DLF-Mh-cQb"/>
+                        <constraint firstAttribute="height" constant="36" id="F6D-KK-x0z"/>
+                        <constraint firstItem="GCn-dX-m2r" firstAttribute="width" secondItem="d7L-BD-ICZ" secondAttribute="width" id="HXY-21-Nsj"/>
+                        <constraint firstItem="d7L-BD-ICZ" firstAttribute="leading" secondItem="Jpn-fl-oPM" secondAttribute="leading" constant="3" id="Vd0-zn-fHu"/>
+                        <constraint firstItem="GCn-dX-m2r" firstAttribute="top" secondItem="Jpn-fl-oPM" secondAttribute="top" constant="3" id="gqk-tu-BzB"/>
+                        <constraint firstAttribute="trailing" secondItem="GCn-dX-m2r" secondAttribute="trailing" constant="3" id="zMi-le-2P5"/>
+                        <constraint firstItem="GCn-dX-m2r" firstAttribute="leading" secondItem="d7L-BD-ICZ" secondAttribute="trailing" id="zOL-sp-F4n"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oXG-B7-fbH">
+                    <rect key="frame" x="0.0" y="52" width="600" height="548"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Jpn-fl-oPM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="3vh-l3-dvk"/>
+                <constraint firstAttribute="trailing" secondItem="Jpn-fl-oPM" secondAttribute="trailing" constant="17" id="CdT-A5-GoD"/>
+                <constraint firstItem="Jpn-fl-oPM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="KcC-ov-68F"/>
+                <constraint firstItem="oXG-B7-fbH" firstAttribute="top" secondItem="Jpn-fl-oPM" secondAttribute="bottom" constant="8" id="SWM-cV-gnp"/>
+                <constraint firstAttribute="trailing" secondItem="oXG-B7-fbH" secondAttribute="trailing" id="bF2-LI-hyM"/>
+                <constraint firstItem="oXG-B7-fbH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dT4-Z3-HAo"/>
+                <constraint firstAttribute="bottom" secondItem="oXG-B7-fbH" secondAttribute="bottom" id="jMC-lo-xCi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="309" y="202"/>
+        </view>
+    </objects>
+</document>

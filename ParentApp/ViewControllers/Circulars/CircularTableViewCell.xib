@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CircularTableViewCell" rowHeight="91" id="KGk-i7-Jjw" customClass="CircularTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hau-i5-DNQ">
+                        <rect key="frame" x="93" y="34" width="501" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="UKJ-ID-cyT"/>
+                        </constraints>
+                        <attributedString key="attributedText"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cLd-ei-GDz">
+                        <rect key="frame" x="14" y="10" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="HZT-WR-Mc9"/>
+                            <constraint firstAttribute="width" constant="70" id="pEX-hM-8gD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XU-2r-sA3">
+                        <rect key="frame" x="93" y="61" width="501" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="3Cz-9n-CpO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="15"/>
+                        <color key="textColor" red="0.49411764705882355" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTu-7r-ZQ8">
+                        <rect key="frame" x="93" y="9" width="501" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="U9B-jc-oG7"/>
+                        </constraints>
+                        <attributedString key="attributedText"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cLd-ei-GDz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="47m-xH-LXB"/>
+                    <constraint firstItem="5XU-2r-sA3" firstAttribute="leading" secondItem="cLd-ei-GDz" secondAttribute="trailing" constant="9" id="6b0-5L-XiX"/>
+                    <constraint firstItem="hau-i5-DNQ" firstAttribute="leading" secondItem="cLd-ei-GDz" secondAttribute="trailing" constant="9" id="Epu-tz-wMn"/>
+                    <constraint firstAttribute="trailing" secondItem="MTu-7r-ZQ8" secondAttribute="trailing" constant="6" id="Gv6-f0-D1G"/>
+                    <constraint firstItem="hau-i5-DNQ" firstAttribute="top" secondItem="MTu-7r-ZQ8" secondAttribute="bottom" constant="4" id="Khs-ZE-vlk"/>
+                    <constraint firstItem="MTu-7r-ZQ8" firstAttribute="leading" secondItem="cLd-ei-GDz" secondAttribute="trailing" constant="9" id="MBU-Z5-7CU"/>
+                    <constraint firstItem="5XU-2r-sA3" firstAttribute="top" secondItem="hau-i5-DNQ" secondAttribute="bottom" constant="6" id="T7q-AL-nNX"/>
+                    <constraint firstAttribute="trailing" secondItem="5XU-2r-sA3" secondAttribute="trailing" constant="6" id="UNH-6g-Lhb"/>
+                    <constraint firstItem="MTu-7r-ZQ8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="Zmm-ju-qw9"/>
+                    <constraint firstAttribute="trailing" secondItem="hau-i5-DNQ" secondAttribute="trailing" constant="6" id="iGj-DL-KBf"/>
+                    <constraint firstItem="cLd-ei-GDz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yok-1O-ITp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="circularImageView" destination="cLd-ei-GDz" id="8f4-ql-oMS"/>
+                <outlet property="circularNoLabel" destination="MTu-7r-ZQ8" id="d4R-mR-Pak"/>
+                <outlet property="dateLabel" destination="5XU-2r-sA3" id="Tol-oP-vAf"/>
+                <outlet property="noOfCircularLabel" destination="hau-i5-DNQ" id="OKP-Qe-Deo"/>
+            </connections>
+            <point key="canvasLocation" x="428" y="331.5"/>
+        </tableViewCell>
+    </objects>
+</document>

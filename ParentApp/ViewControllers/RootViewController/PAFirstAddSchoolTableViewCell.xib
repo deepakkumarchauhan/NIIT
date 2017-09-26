@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_relay-regular.ttf">
+            <string>Relay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PAFirstAddSchoolTableViewCell" rowHeight="72" id="KGk-i7-Jjw" customClass="PAFirstAddSchoolTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="600" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qsk-wz-xjW" customClass="CATextField">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="MNY-y7-pyl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.85882352939999995" green="0.86274509799999999" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="paddingValue">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="1hK-HP-oAa"/>
+                        </connections>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGt-I0-GnP">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="B36-TY-pgb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Relay-Regular" family="Relay-Regular" pointSize="15"/>
+                        <color key="textColor" red="0.82990938800000003" green="0.14271421379999999" blue="0.19663443620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gU-M6-bRM">
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="VaY-Tx-Q2P"/>
+                        </constraints>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="qsk-wz-xjW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="5Yy-rb-230"/>
+                    <constraint firstItem="WGt-I0-GnP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="6bf-NX-5ov"/>
+                    <constraint firstItem="WGt-I0-GnP" firstAttribute="top" secondItem="qsk-wz-xjW" secondAttribute="bottom" constant="-4" id="C7l-ii-2kp"/>
+                    <constraint firstAttribute="trailing" secondItem="qsk-wz-xjW" secondAttribute="trailing" constant="25" id="OGm-aK-DbA"/>
+                    <constraint firstItem="1gU-M6-bRM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Xcy-5O-Rqa"/>
+                    <constraint firstItem="1gU-M6-bRM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="gfw-08-BO7"/>
+                    <constraint firstAttribute="trailing" secondItem="1gU-M6-bRM" secondAttribute="trailing" constant="25" id="moo-De-O1y"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WGt-I0-GnP" secondAttribute="trailing" constant="17" id="qLN-rx-CCz"/>
+                    <constraint firstItem="qsk-wz-xjW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="qaT-Tg-WTa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="errorLabel" destination="WGt-I0-GnP" id="Heb-Y1-jBX"/>
+                <outlet property="firstAddSchoolTextField" destination="qsk-wz-xjW" id="Zc4-9U-mXH"/>
+                <outlet property="pickerButton" destination="1gU-M6-bRM" id="ZLR-CJ-3Kh"/>
+            </connections>
+            <point key="canvasLocation" x="396" y="165"/>
+        </tableViewCell>
+    </objects>
+</document>
